@@ -1,0 +1,3 @@
+#strip characters
+
+for i in *.eml; do rename -n 's/[ _()]//g' "$i"; done
