@@ -1,0 +1,12 @@
+[Unit]
+Description=probemon
+
+[Service]
+Restart=always
+RestartSec=5
+WorkingDirectory=/home/pi/probemon
+ExecStart=/usr/bin/python /home/pi/probemon/probemon.py -i mon0 -o /var/log/probemon.log
+
+[Install]
+WantedBy=multi-user.target
+Alias=probemon.service
