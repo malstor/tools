@@ -1,0 +1,7 @@
+You should now be able to clone cards in standalone mode. Here are the instructions on using the new features in standalone mode:
+
+    1) Enter standalone mode by holding the button on the top of the proxmark3 until the LED’s begin to flash.
+    2) Once one red LED is on, press and hold the button again until the second red LED comes on.
+    3) Present the card that you wish to clone, the second red LED will go out.
+    4) Place the blank T55x7 type card on the antenna and press and hold the button one more time until both the first red LED and the orange LED are lit.
+    5) Once the orange LED goes out the card has been cloned, Enjoy! 
