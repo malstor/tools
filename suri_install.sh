@@ -19,6 +19,8 @@ usermod -a -G adm logstash
 /bin/systemctl daemon-reload
 /bin/systemctl enable suricata
 wget -P /etc/logstash/conf.d/ https://raw.githubusercontent.com/malstor/tools/master/logstash_suricata.conf
+wget -P /etc/logstash/templates/ https://raw.githubusercontent.com/malstor/tools/master/suricata_template.json
+chown logstash /etc/logstash/templates/suricata_template.json
 rm /etc/suricata/suricata.yaml
 wget -P /etc/suricata/ https://raw.githubusercontent.com/malstor/tools/master/suricata.yaml
 touch /var/log/logstash/stream
