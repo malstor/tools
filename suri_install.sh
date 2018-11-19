@@ -27,6 +27,7 @@ wget -P /etc/logstash/templates/ https://raw.githubusercontent.com/malstor/tools
 chown logstash /etc/logstash/templates/suricata_template.json
 rm /etc/suricata/suricata.yaml
 wget -P /etc/suricata/ https://raw.githubusercontent.com/malstor/tools/master/suricata.yaml
-touch /var/log/logstash/stream
+rm /etc/network/interfaces
+wget -P /etc/network/ https://raw.githubusercontent.com/malstor/tools/master/interfaces
 systemctl start logstash.service
 systemctl start suricata
