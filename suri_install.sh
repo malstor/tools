@@ -6,12 +6,9 @@ add-apt-repository ppa:oisf/suricata-rust-experimental
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 apt update
-apt -y install networkd-dispatcher libpcre3 libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev nmap vim libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libmagic-dev libcap-ng-dev libjansson-dev pkg-config libnetfilter-queue-dev geoip-bin geoip-database geoipupdate apt-transport-https python-pip suricata openjdk-8-jdk
+apt -y install ifupdown libpcre3 libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev nmap vim libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libmagic-dev libcap-ng-dev libjansson-dev pkg-config libnetfilter-queue-dev geoip-bin geoip-database geoipupdate apt-transport-https python-pip suricata openjdk-8-jdk
 apt -y auto-remove
 apt -y install logstash
-ip link set eno2 promisc on
-ip link set eno3 promisc on
-ip link set eno4 promisc on
 pip install pyyaml
 pip install https://github.com/OISF/suricata-update/archive/master.zip
 mkdir /var/lib/suricata
