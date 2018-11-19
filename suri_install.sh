@@ -29,5 +29,8 @@ rm /etc/suricata/suricata.yaml
 wget -P /etc/suricata/ https://raw.githubusercontent.com/malstor/tools/master/suricata.yaml
 rm /etc/network/interfaces
 wget -P /etc/network/ https://raw.githubusercontent.com/malstor/tools/master/interfaces
+rm /etc/sysctl.conf
+wget -P /etc/ https://raw.githubusercontent.com/malstor/tools/master/sysctl.conf
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 systemctl start logstash.service
 systemctl start suricata
