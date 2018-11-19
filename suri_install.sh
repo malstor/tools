@@ -9,6 +9,7 @@ apt update
 apt -y install ifupdown libpcre3 libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev nmap vim libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libmagic-dev libcap-ng-dev libjansson-dev pkg-config libnetfilter-queue-dev geoip-bin geoip-database geoipupdate apt-transport-https python-pip suricata openjdk-8-jdk
 apt -y auto-remove
 apt -y install logstash
+apt -y purge netplan.io
 pip install pyyaml
 pip install https://github.com/OISF/suricata-update/archive/master.zip
 mkdir /var/lib/suricata
