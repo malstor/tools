@@ -1,0 +1,17 @@
+auto eno1
+iface eno1 inet dhcp
+
+auto eno2
+iface eno2 inet manual
+        up ifconfig eno2 promisc up
+        down ifconfig eno2 promisc down
+
+auto eno3
+iface eno3 inet manual
+        up ifconfig eno3 promisc up
+        down ifconfig eno3 promisc down
+
+auto eno4
+iface eno4 inet manual
+        up ifconfig eno4 promisc up
+        down ifconig eno4 promisc dow
