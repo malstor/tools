@@ -2,7 +2,7 @@
 apt-add-repository universe
 apt-add-repository multiverse
 apt install python
-add-apt-repository ppa:oisf/suricata-rust-experimental
+add-apt-repository ppa:oisf/suricata-stable
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 apt update
