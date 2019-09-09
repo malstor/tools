@@ -15,3 +15,14 @@ auto eno4
 iface eno4 inet manual
         up ifconfig eno4 promisc up
         down ifconig eno4 promisc dow
+
+auto enp1s0
+iface enp1s0 inet manual
+  up ifconfig $IFACE -arp up
+  up ip link set $IFACE promisc on
+  down ip link set $IFACE promisc off
+  down ifconfig $IFACE down
+  post-up for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
+  post-up echo 1 > /proc/sys/net/ipv6/conf/$IFACE/disable_ipv6auto eth1
+  #check to see if nic support hw buffer 'ethtool -g $iface' (this one does not)
+  #post-up ethtool -G $IFACE rx 4096; for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
