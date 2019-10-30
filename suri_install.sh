@@ -9,7 +9,7 @@ apt update
 apt -y install ifupdown libpcre3 libpcre3-dev build-essential autoconf automake libtool libpcap-dev libnet1-dev nmap vim libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libmagic-dev libcap-ng-dev libjansson-dev pkg-config libnetfilter-queue-dev geoip-bin geoip-database geoipupdate apt-transport-https python-pip suricata openjdk-8-jdk
 apt -y auto-remove
 apt -y install logstash
-apt -y purge netplan.io
+#apt -y purge netplan.io
 pip install pyyaml
 pip install https://github.com/OISF/suricata-update/archive/master.zip
 mkdir /var/lib/suricata
@@ -27,10 +27,10 @@ wget -P /etc/logstash/templates/ https://raw.githubusercontent.com/malstor/tools
 chown logstash /etc/logstash/templates/suricata_template.json
 rm /etc/suricata/suricata.yaml
 wget -P /etc/suricata/ https://raw.githubusercontent.com/malstor/tools/master/suricata.yaml
-rm /etc/network/interfaces
-wget -P /etc/network/ https://raw.githubusercontent.com/malstor/tools/master/interfaces
-rm /etc/sysctl.conf
-wget -P /etc/ https://raw.githubusercontent.com/malstor/tools/master/sysctl.conf
-cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+#rm /etc/network/interfaces
+#wget -P /etc/network/ https://raw.githubusercontent.com/malstor/tools/master/interfaces
+#rm /etc/sysctl.conf
+#wget -P /etc/ https://raw.githubusercontent.com/malstor/tools/master/sysctl.conf
+#cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 systemctl start logstash.service
 systemctl start suricata
